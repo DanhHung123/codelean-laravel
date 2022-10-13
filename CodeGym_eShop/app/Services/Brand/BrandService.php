@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Services\Brand;
+
+use App\Repositories\Blog\BlogRepositoryInterface;
+use App\Repositories\Brand\BrandRepositoryInterface;
+use App\Services\BaseService;
+
+class BrandService extends BaseService implements BrandServiceInterface
+{
+    public $repository;
+
+    public function __construct(BrandRepositoryInterface $BrandRepository)
+    {
+        $this->repository = $BrandRepository;
+    }
+}
